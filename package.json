@@ -1,0 +1,53 @@
+{
+  "name": "jira-kanban-realtime",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run websocket:dev\" \"npm run next:dev\"",
+    "next:dev": "next dev",
+    "websocket:dev": "node server/websocket-server.js",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "websocket:prod": "node server/websocket-server.js",
+    "postinstall": "npm run build:websocket",
+    "build:websocket": "echo 'WebSocket server ready for deployment'"
+  },
+  "dependencies": {
+    "@hello-pangea/dnd": "^16.5.0",
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-popover": "^1.0.7",
+    "@radix-ui/react-scroll-area": "^1.0.5",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-separator": "^1.0.3",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-toast": "^1.1.5",
+    "@tailwindcss/postcss": "^4.1.8",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "concurrently": "^8.2.2",
+    "date-fns": "^2.30.0",
+    "lucide-react": "^0.294.0",
+    "next": "14.0.4",
+    "react": "^18",
+    "react-day-picker": "^8.9.1",
+    "react-dom": "^18",
+    "socket.io": "^4.7.4",
+    "socket.io-client": "^4.7.4",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5"
+  }
+}
