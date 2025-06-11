@@ -31,35 +31,39 @@ npm >= 9
 
 ### Instalação
 
-\`\`\`bash
-
 # Clonar repositório
 
-git clone <repo-url>
+```bash
+git clone https://github.com/vinnyzor/jira-kanban-realtime.git
 cd kanban-realtime
+```
 
 # Instalar dependências
 
+```bash
 npm install
+```
 
 # Configurar variáveis de ambiente
 
+```bash
 cp .env.example .env.local
-\`\`\`
+```
 
 ### Executar em desenvolvimento
 
-\`\`\`bash
-
 # Iniciar ambos os servidores (WebSocket + Next.js)
 
+```bash
 npm run dev
+```
 
 # Ou separadamente:
 
+```bash
 npm run websocket:dev # Terminal 1
 npm run next:dev # Terminal 2
-\`\`\`
+```
 
 A aplicação estará disponível em:
 
@@ -70,8 +74,6 @@ A aplicação estará disponível em:
 
 ### 1. Deploy do WebSocket Server (Railway)
 
-\`\`\`bash
-
 # Instalar Railway CLI
 
 ```bash
@@ -80,47 +82,56 @@ npm install -g @railway/cli
 
 # Login no Railway
 
+```bash
 railway login
+```
 
 # Criar projeto
 
+```bash
 railway new
+```
 
 # Deploy
 
+```bash
 railway up
-\`\`\`
+```
 
 ### 2. Deploy do Frontend (Vercel)
 
-\`\`\`bash
-
 # Instalar Vercel CLI
 
+```bash
 npm install -g vercel
+```
 
 # Deploy
 
+```bash
 vercel
+```
 
 # Configurar variável de ambiente na Vercel:
 
-# NEXT_PUBLIC_WEBSOCKET_URL=wss://your-project.railway.app
-
-\`\`\`
+```bash
+NEXT_PUBLIC_WEBSOCKET_URL=wss://your-project.railway.app
+```
 
 ### 3. Configurar Variáveis de Ambiente
 
 **Vercel Dashboard:**
-\`\`\`
+
+```bash
 NEXT_PUBLIC_WEBSOCKET_URL=wss://your-websocket-server.railway.app
-\`\`\`
+```
 
 **Railway Dashboard:**
-\`\`\`
+
+```bash
 NODE_ENV=production
 PORT=3001
-\`\`\`
+```
 
 ## 📁 Estrutura do Projeto
 
