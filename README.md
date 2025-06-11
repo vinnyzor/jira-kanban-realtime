@@ -24,10 +24,10 @@ Uma aplicação Kanban sofisticada com colaboração em tempo real usando WebSoc
 
 ### Pré-requisitos
 
-\`\`\`bash
+```bash
 node >= 18
 npm >= 9
-\`\`\`
+```
 
 ### Instalação
 
@@ -74,7 +74,9 @@ A aplicação estará disponível em:
 
 # Instalar Railway CLI
 
+```bash
 npm install -g @railway/cli
+```
 
 # Login no Railway
 
