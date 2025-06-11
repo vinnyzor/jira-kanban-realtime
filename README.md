@@ -151,7 +151,3 @@ server/               # Servidor WebSocket
 lib/                  # Utilitários
 public/               # Assets estáticos
 ```
-
-## 🔧 Scripts Disponíveis
-
-\`
